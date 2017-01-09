@@ -1,0 +1,24 @@
+{
+  "name": "cmas",
+  "authors": [
+    "Andrey Kuzmenko <andrey.kuzmenko@yamalspg.ru>"
+  ],
+  "description": "cmas",
+  "main": "main.dart",
+  "keywords": [
+    "cmas"
+  ],
+  "license": "yamallng",
+  "homepage": "http://yamallng.ru/",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "bower_components",
+    "../web/vendor/",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "normalize-css": "^5.0.0"
+  }
+}
