@@ -3,3 +3,5 @@
 pubspec.lock
 build
 .idea
+.sass-cache
+web/vendor
