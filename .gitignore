@@ -5,3 +5,5 @@ build
 .idea
 .sass-cache
 web/vendor
+lib/auth.frontend
+lib/alert.frontend
