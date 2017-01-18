@@ -1,8 +1,9 @@
+import 'dart:html';
+
 import 'package:angular2/core.dart';
 import 'package:angular2/platform/common.dart';
 import 'package:angular2/router.dart';
 
-//import 'package:cmas/routes.dart';
 import 'package:auth/auth_service.dart';
 import 'package:auth/auth_component.dart';
 import 'package:alert/alert_service.dart';
@@ -10,7 +11,6 @@ import 'package:alert/alert_component.dart';
 
 @Component(
     selector: 'cmas-app',
-
     providers: const [
     ROUTER_PROVIDERS,
     const Provider(LocationStrategy, useClass: HashLocationStrategy),
@@ -28,14 +28,20 @@ import 'package:alert/alert_component.dart';
 
 @RouteConfig(const [AuthComponent.route])
 
-class AppComponent implements  AfterViewInit {
+class AppComponent implements AfterViewInit {
   final AlertService _alertService;
 
   AppComponent(this._alertService) {
-
   }
 
-  ngAfterViewInit() {
+  @override
+  void ngAfterViewInit() {
     _alertService.Info('ngAfterViewInit!');
+
+    var script = new ScriptElement()
+      ..async = true
+      ..type = 'text/javascript'
+      ..src = 'assets/js/common.js';
+    document.body.append(script);
   }
 }
