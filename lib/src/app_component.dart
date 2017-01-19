@@ -6,8 +6,11 @@ import 'package:angular2/router.dart';
 
 import 'package:auth/auth_service.dart';
 import 'package:auth/auth_component.dart';
+
 import 'package:alert/alert_service.dart';
 import 'package:alert/alert_component.dart';
+
+import 'package:contract_view/contract_view_component.dart';
 
 @Component(
     selector: 'cmas-app',
@@ -26,7 +29,7 @@ import 'package:alert/alert_component.dart';
 
 )
 
-@RouteConfig(const [AuthComponent.route])
+@RouteConfig(const [AuthComponent.route, ContractViewComponent.route])
 
 class AppComponent implements AfterViewInit {
   final AlertService _alertService;

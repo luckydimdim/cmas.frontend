@@ -212,9 +212,9 @@
                     </a>
                 </div>
             </li>
-            <li class="nav-item">
+           <!-- <li class="nav-item">
                 <a class="nav-link" href="#"><i class="icon-location-pin"></i></a>
-            </li>
+            </li>-->
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
                     <img src="/img/avatars/6.jpg" class="img-avatar" alt="admin@bootstrapmaster.com">
@@ -223,7 +223,7 @@
                 <div class="dropdown-menu dropdown-menu-right">
 
                     <div class="dropdown-header text-xs-center">
-                        <strong>Account</strong>
+                        <strong>Аккаунт</strong>
                     </div>
 
                     <a class="dropdown-item" href="#"><i class="fa fa-bell-o"></i> Updates<span class="tag tag-info">42</span></a>
@@ -235,13 +235,13 @@
                         <strong>Настройки</strong>
                     </div>
 
-                    <a class="dropdown-item" href="#"><i class="fa fa-user"></i> Profile</a>
-                    <a class="dropdown-item" href="#"><i class="fa fa-wrench"></i> Settings</a>
+                    <a class="dropdown-item" href="#"><i class="fa fa-user"></i> Профиль</a>
+<!--                    <a class="dropdown-item" href="#"><i class="fa fa-wrench"></i> Settings</a>
                     <a class="dropdown-item" href="#"><i class="fa fa-usd"></i> Payments<span class="tag tag-default">42</span></a>
                     <a class="dropdown-item" href="#"><i class="fa fa-file"></i> Projects<span class="tag tag-primary">42</span></a>
                     <div class="divider"></div>
-                    <a class="dropdown-item" href="#"><i class="fa fa-shield"></i> Lock Account</a>
-                    <a class="dropdown-item" href="#"><i class="fa fa-lock"></i> Logout</a>
+                    <a class="dropdown-item" href="#"><i class="fa fa-shield"></i> Lock Account</a>-->
+                    <a class="dropdown-item" href="#"><i class="fa fa-lock"></i> Выход</a>
                 </div>
             </li>
             <li class="nav-item">
@@ -256,170 +256,38 @@
 
     <nav class="sidebar-nav">
         <ul class="nav">
-            <li class="nav-title">
-                Dashboard
+          
+            <li class="nav-item">
+                <a class="nav-link " [routerLink]="['ContractView']" ><i class="icon-speedometer"></i> Главная</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="index.html"><i class="icon-speedometer"></i> Dashboard <span class="tag tag-info">NEW</span></a>
-            </li>
-
-            <li class="divider"></li>
-            <li class="nav-title">
-                UI Elements
-            </li>
-            <li class="nav-item nav-dropdown">
-                <a class="nav-link nav-dropdown-toggle" href="#"><i class="icon-puzzle"></i> Components</a>
-                <ul class="nav-dropdown-items">
-                    <li class="nav-item">
-                        <a class="nav-link" href="components-buttons.html"><i class="icon-puzzle"></i> Buttons</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="components-social-buttons.html"><i class="icon-puzzle"></i> Social Buttons</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="components-cards.html"><i class="icon-puzzle"></i> Cards</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="components-switches.html"><i class="icon-puzzle"></i> Switches</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="components-tables.html"><i class="icon-puzzle"></i> Tables</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="components-tabs.html"><i class="icon-puzzle"></i> Tabs</a>
-                    </li>
-                </ul>
-            </li>
-            <li class="nav-item nav-dropdown">
-                <a class="nav-link nav-dropdown-toggle" href="#"><i class="icon-note"></i> Forms</a>
-                <ul class="nav-dropdown-items">
-                    <li class="nav-item">
-                        <a class="nav-link" href="forms-basic-forms.html"><i class="icon-note"></i> Basic Forms</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="forms-advanced-forms.html"><i class="icon-note"></i> Advanced Forms</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="forms-validation.html"><i class="icon-note"></i> Validation</a>
-                    </li>
-                </ul>
-            </li>
-            <li class="nav-item nav-dropdown">
-                <a class="nav-link nav-dropdown-toggle" href="#"><i class="icon-star"></i> Icons</a>
-                <ul class="nav-dropdown-items">
-                    <li class="nav-item">
-                        <a class="nav-link" href="icons-font-awesome.html"><i class="icon-star"></i> Font Awesome</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="icons-simple-line-icons.html"><i class="icon-star"></i> Simple Line Icons</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="icons-glyphicons.html"><i class="icon-star"></i> Glyphicons</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="icons-glyphicons-filetypes.html"><i class="icon-star"></i> Filetypes</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="icons-glyphicons-social.html"><i class="icon-star"></i> Glyphicons Social</a>
-                    </li>
-                </ul>
-            </li>
-            <li class="nav-item nav-dropdown">
-                <a class="nav-link nav-dropdown-toggle" href="#"><i class="icon-energy"></i> Plugins</a>
-                <ul class="nav-dropdown-items">
-                    <li class="nav-item">
-                        <a class="nav-link" href="plugins-calendar.html"><i class="icon-calendar"></i> Calendar</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="plugins-loading-buttons.html"><i class="icon-cursor"></i> Loading Buttons</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="plugins-notifications.html"><i class="icon-info"></i> Notifications</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="plugins-sliders.html"><i class="icon-equalizer"></i> Sliders</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="plugins-spinners.html"><i class="fa fa-spinner"></i> Spinners</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="plugins-tables.html"><i class="icon-list"></i> Tables</a>
-                    </li>
-                </ul>
+                <a class="nav-link" href="#"><i class="icon-speedometer"></i> Договоры </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="widgets.html"><i class="icon-calculator"></i> Widgets <span class="tag tag-info">NEW</span></a>
+                <a class="nav-link" href="#"><i class="icon-speedometer"></i> Заявки </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="charts.html"><i class="icon-pie-chart"></i> Charts</a>
+                <a class="nav-link" href="#"><i class="icon-speedometer"></i> Бюджеты </a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#"><i class="icon-speedometer"></i> Подрядчики </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#"><i class="icon-speedometer"></i> Объекты </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#"><i class="icon-speedometer"></i> Аналитика </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#"><i class="icon-speedometer"></i> Курсы валют </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#"><i class="icon-speedometer"></i> На оплату </a>
+            </li>
+           
             <li class="divider"></li>
             <li class="nav-title">
-                Extras
-            </li>
-            <li class="nav-item nav-dropdown">
-                <a class="nav-link nav-dropdown-toggle" href="#"><i class="icon-star"></i> Pages</a>
-                <ul class="nav-dropdown-items">
-                    <li class="nav-item">
-                        <a class="nav-link" href="pages-login.html" target="_top"><i class="icon-star"></i> Login</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="pages-register.html" target="_top"><i class="icon-star"></i> Register</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="pages-404.html" target="_top"><i class="icon-star"></i> Error 404</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="pages-500.html" target="_top"><i class="icon-star"></i> Error 500</a>
-                    </li>
-                </ul>
-            </li>
-            <li class="nav-item nav-dropdown">
-                <a class="nav-link nav-dropdown-toggle" href="#"><i class="icon-layers"></i> UI Kits</a>
-
-                <ul class="nav-dropdown-items">
-                    <li class="nav-item nav-dropdown">
-                        <a class="nav-link nav-dropdown-toggle" href="#"><i class="icon-speech"></i> Invoicing</a>
-                        <ul class="nav-dropdown-items">
-                            <li class="nav-item">
-                                <a class="nav-link" href="UIkits-invoicing-invoice.html"><i class="icon-speech"></i> Invoice</a>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-                <ul class="nav-dropdown-items">
-                    <li class="nav-item nav-dropdown">
-                        <a class="nav-link nav-dropdown-toggle" href="#"><i class="icon-speech"></i> Email</a>
-                        <ul class="nav-dropdown-items">
-                            <li class="nav-item">
-                                <a class="nav-link" href="UIkits-email-inbox.html"><i class="icon-speech"></i> Inbox</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="UIkits-email-message.html"><i class="icon-speech"></i> Message</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="UIkits-email-compose.html"><i class="icon-speech"></i> Compose</a>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-            </li>
-            <li class="divider m-h"></li>
-            <li class="nav-title">
-                Labels
-            </li>
-            <li class="nav-item hidden-cn">
-                <a class="nav-label" href="#"><i class="fa fa-circle text-danger"></i> Label danger</a>
-            </li>
-            <li class="nav-item hidden-cn">
-                <a class="nav-label" href="#"><i class="fa fa-circle text-info"></i> Label info</a>
-            </li>
-            <li class="nav-item hidden-cn">
-                <a class="nav-label" href="#"><i class="fa fa-circle text-warning"></i> Label warning</a>
-            </li>
-            <li class="divider"></li>
-            <li class="nav-title">
-                System Utilization
+                Статистика
             </li>
             <li class="nav-item px-1 hidden-cn">
                 <div class="text-uppercase mb-q">
@@ -456,26 +324,26 @@
     <!-- Breadcrumb -->
     <ol class="breadcrumb">
         <li class="breadcrumb-item">Главная</li>
-        <li class="breadcrumb-item"><a href="#">Admin</a></li>
-        <li class="breadcrumb-item active">Dashboard</li>
+<!--        <li class="breadcrumb-item"><a href="#">Admin</a></li>
+        <li class="breadcrumb-item active">Dashboard</li>-->
 
         <!-- Breadcrumb Menu-->
-        <li class="breadcrumb-menu">
+     <!--   <li class="breadcrumb-menu">
             <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
                 <a class="btn btn-secondary" href="#"><i class="icon-speech"></i></a>
                 <a class="btn btn-secondary" href="./"><i class="icon-graph"></i> &nbsp;Dashboard</a>
                 <a class="btn btn-secondary" href="#"><i class="icon-settings"></i> &nbsp;Settings</a>
             </div>
-        </li>
+        </li>-->
     </ol>
 
     <alert></alert>
-    <router-outlet></router-outlet>
+    
 
-    <!--<div class="container-fluid">
-
-    </div>-->
-    <!-- /.conainer-fluid -->
+    <div class="container-fluid">
+	    <router-outlet></router-outlet>
+    </div>
+     <!--/.conainer-fluid -->
 </main>
 
 <aside class="aside-menu">
@@ -507,7 +375,7 @@
                     <strong>Lucas</strong>
                 </div>
                 <small class="text-muted mr-1"><i class="icon-calendar"></i>&nbsp; 1 - 3pm</small>
-                <small class="text-muted"><i class="icon-location-pin"></i>&nbsp; Palo Alto, CA</small>
+               <!-- <small class="text-muted"><i class="icon-location-pin"></i>&nbsp; Palo Alto, CA</small>-->
             </div>
             <hr class="mx-1 my-0">
             <div class="callout callout-info m-0 py-1">
@@ -555,7 +423,7 @@
                 <div>
                     <strong>#10 Startups.Garden</strong>Meetup</div>
                 <small class="text-muted mr-1"><i class="icon-calendar"></i>&nbsp; 1 - 3pm</small>
-                <small class="text-muted"><i class="icon-location-pin"></i>&nbsp; Palo Alto, CA</small>
+                <!--<small class="text-muted"><i class="icon-location-pin"></i>&nbsp; Palo Alto, CA</small>-->
             </div>
             <hr class="mx-1 my-0">
             <div class="callout callout-primary m-0 py-1">
@@ -724,7 +592,7 @@
             </div>
 
             <hr>
-            <h6>System Utilization</h6>
+            <h6>Статистика</h6>
 
             <div class="text-uppercase mb-q mt-2">
                 <small><b>CPU Usage</b>
@@ -759,9 +627,7 @@
 
 <footer class="footer">
         <span class="text-left">
-            <a href="https://genesisui.com">Alba</a> © 2016 creativeLabs.
+            <a href="http://yamallng.ru/">© 2017 ОАО Ямал СПГ</a>
         </span>
-    <span class="float-xs-right">
-            Powered by <a href="https://genesisui.com">GenesisUI</a>
-        </span>
+    
 </footer>
