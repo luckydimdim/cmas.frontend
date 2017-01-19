@@ -17,8 +17,8 @@ dependencies:
     bower_installer:
         git: http://cm-ylng-msk-04/git/bower_installer.frontend.git
     auth:
-        #git: http://cm-ylng-msk-04/git/auth.frontend.git
-        path: lib/auth.frontend
+        git: http://cm-ylng-msk-04/git/auth.frontend.git
+        #path: lib/auth.frontend
     alert:
         git: http://cm-ylng-msk-04/git/alert.frontend.git
         #path: lib/alert.frontend
