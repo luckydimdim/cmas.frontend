@@ -53,7 +53,7 @@ class MasterComponent implements AfterViewInit {
     var script = new ScriptElement()
       ..async = true
       ..type = 'text/javascript'
-      ..src = 'assets/js/common.js';
+      ..src = 'assets/js/app.js';
     document.body.append(script);
   }
 }
