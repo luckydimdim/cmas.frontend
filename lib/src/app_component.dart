@@ -11,9 +11,9 @@ import 'package:alert/alert_service.dart';
 import 'package:alert/alert_component.dart';
 import 'package:master/master_component.dart';
 
-import 'auth_router_outlet.dart';
+import 'package:auth_router_outlet/auth_router_outlet.dart';
 
-import 'package:contract_view/contract_view_component.dart';
+import 'package:contract/contract_view_component.dart';
 import 'package:dashboard/dashboard_component.dart';
 
 @Component(
@@ -22,16 +22,14 @@ import 'package:dashboard/dashboard_component.dart';
     ROUTER_PROVIDERS,
     const Provider(LocationStrategy, useClass: HashLocationStrategy),
     const Provider(AuthenticationService, useClass: AuthenticationService),
-    const Provider(AlertService, useClass: AlertService),
+    const Provider(AlertService, useClass: AlertService)
     ]
 )
 
 @View(
     templateUrl: 'app_component.html',
-    styleUrls: const ['app_component.css'],
-    directives: const [MasterComponent, AlertComponent, AuthComponent, AuthRouterOutlet],
+    directives: const [MasterComponent, AlertComponent, AuthComponent, AuthRouterOutlet]
 )
-
 
 @RouteConfig(const [AuthComponent.route, MasterComponent.route])
 class AppComponent implements AfterViewInit {

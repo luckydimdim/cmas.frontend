@@ -18,16 +18,16 @@ dependencies:
         git: http://cm-ylng-msk-04/git/bower_installer.frontend.git
     auth:
         git: http://cm-ylng-msk-04/git/auth.frontend.git
-        #path: lib/auth.frontend
     alert:
         git: http://cm-ylng-msk-04/git/alert.frontend.git
-        #path: lib/alert.frontend
-    contract_view:
-        path: lib/contract_view.frontend
+    contract:
+        git: http://ci/git/contract.frontend.git
     dashboard:
-        path: lib/dashboard.frontend
+        git: http://ci/git/dashboard.frontend.git
     master:
-        path: lib/master.frontend
+        git: http://ci/git/master.frontend.git
+    auth_router_outlet:
+      git: http://ci/git/auth_router_outlet.frontend.git
 dev_dependencies:
     test: ^0.12.18                        # A library for writing dart unit tests. https://pub.dartlang.org/packages/test
     yaml: ^2.1.12                         # A parser for YAML. https://pub.dartlang.org/packages/yaml
