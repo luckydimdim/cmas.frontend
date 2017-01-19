@@ -11,6 +11,7 @@ import 'package:alert/alert_service.dart';
 import 'package:alert/alert_component.dart';
 
 import 'package:contract_view/contract_view_component.dart';
+import 'package:dashboard/dashboard_component.dart';
 
 @Component(
     selector: 'cmas-app',
@@ -29,7 +30,7 @@ import 'package:contract_view/contract_view_component.dart';
 
 )
 
-@RouteConfig(const [AuthComponent.route, ContractViewComponent.route])
+@RouteConfig(const [AuthComponent.route, ContractViewComponent.route, DashboardComponent.route])
 
 class AppComponent implements AfterViewInit {
   final AlertService _alertService;

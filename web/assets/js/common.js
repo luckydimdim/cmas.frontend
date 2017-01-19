@@ -40,7 +40,7 @@ $(document).ready(function($){
 		}
 
 		if ($($(this))[0].href==cUrl) {
-			$(this).addClass('active');
+			// $(this).addClass('active'); Заккоментил, т.к. ангуляр сам добавляет класс router-link-active
 
 			$(this).parents('ul').add(this).each(function(){
 			    $(this).parent().addClass('open');
