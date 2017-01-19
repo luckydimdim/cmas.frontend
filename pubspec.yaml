@@ -21,13 +21,13 @@ dependencies:
     alert:
         git: http://cm-ylng-msk-04/git/alert.frontend.git
     contract:
-        git: http://ci/git/contract.frontend.git
+        git: http://cm-ylng-msk-04/git/contract.frontend.git
     dashboard:
-        git: http://ci/git/dashboard.frontend.git
+        git: http://cm-ylng-msk-04/git/dashboard.frontend.git
     master:
-        git: http://ci/git/master.frontend.git
+        git: http://cm-ylng-msk-04/git/master.frontend.git
     auth_router_outlet:
-      git: http://ci/git/auth_router_outlet.frontend.git
+        git: http://cm-ylng-msk-04/git/auth_router_outlet.frontend.git
 dev_dependencies:
     test: ^0.12.18                        # A library for writing dart unit tests. https://pub.dartlang.org/packages/test
     yaml: ^2.1.12                         # A parser for YAML. https://pub.dartlang.org/packages/yaml

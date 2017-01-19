@@ -4,5 +4,4 @@ pubspec.lock
 build
 .idea
 .sass-cache
-lib/auth.frontend
-lib/alert.frontend
+lib/*.frontend
