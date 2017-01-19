@@ -132,6 +132,10 @@ body:not(.top-nav) {
                         }
                     }
 
+                    &.router-link-active {
+                        @extend .active;
+                    }
+
                     [class^="icon-"], [class*=" icon-"] {
                         display: inline-block;
                         margin-top: -4px;
