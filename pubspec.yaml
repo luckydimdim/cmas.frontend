@@ -20,12 +20,9 @@ dependencies:
         git: http://cm-ylng-msk-04/git/auth.frontend.git
     alert:
         git: http://cm-ylng-msk-04/git/alert.frontend.git
-    contract:
-        git: http://cm-ylng-msk-04/git/contract.frontend.git
-    dashboard:
-        git: http://cm-ylng-msk-04/git/dashboard.frontend.git
     master:
         git: http://cm-ylng-msk-04/git/master.frontend.git
+        #path: lib/master.frontend
     auth_router_outlet:
         git: http://cm-ylng-msk-04/git/auth_router_outlet.frontend.git
 dev_dependencies:
