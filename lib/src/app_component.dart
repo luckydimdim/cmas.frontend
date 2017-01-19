@@ -11,6 +11,8 @@ import 'package:alert/alert_service.dart';
 import 'package:alert/alert_component.dart';
 import 'package:master/master_component.dart';
 
+import 'auth_router_outlet.dart';
+
 import 'package:contract_view/contract_view_component.dart';
 import 'package:dashboard/dashboard_component.dart';
 
@@ -27,11 +29,11 @@ import 'package:dashboard/dashboard_component.dart';
 @View(
     templateUrl: 'app_component.html',
     styleUrls: const ['app_component.css'],
-    directives: const [MasterComponent, AlertComponent, AuthComponent],
+    directives: const [MasterComponent, AlertComponent, AuthComponent, AuthRouterOutlet],
 )
 
 
-@RouteConfig(const [AuthComponent.route, ContractViewComponent.route, DashboardComponent.route])
+@RouteConfig(const [AuthComponent.route, MasterComponent.route])
 class AppComponent implements AfterViewInit {
   final AlertService _alertService;
   final AuthenticationService _authService;

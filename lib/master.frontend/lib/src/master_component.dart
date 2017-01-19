@@ -25,8 +25,20 @@ import 'package:dashboard/dashboard_component.dart';
 
 
 
-
+@RouteConfig(const [ContractViewComponent.route, DashboardComponent.route])
 class MasterComponent implements AfterViewInit {
+
+
+  static const String route_name = "Master";
+  static const String route_path = "master/...";
+  static const Route route = const Route(
+      path: MasterComponent.route_path,
+      component: MasterComponent,
+      name: MasterComponent.route_name,
+      useAsDefault: true
+  );
+
+
   final AlertService _alertService;
 
 
