@@ -11,3 +11,5 @@ web/**/*.css
 
 web/**/*.map
 !web/assets/style.css.map
+
+**/*.orig
