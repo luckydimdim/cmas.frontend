@@ -13,8 +13,10 @@ import 'package:master/master_component.dart';
 
 import 'package:auth_router_outlet/auth_router_outlet.dart';
 
-import 'package:contract/contract_view_component.dart';
-import 'package:dashboard/dashboard_component.dart';
+import 'package:resources_loader/resources_loader.dart';
+
+@Injectable()
+class ResourcesLoaderService extends ResourcesLoader {}
 
 @Component(
     selector: 'cmas-app',
@@ -22,7 +24,8 @@ import 'package:dashboard/dashboard_component.dart';
     ROUTER_PROVIDERS,
     const Provider(LocationStrategy, useClass: HashLocationStrategy),
     const Provider(AuthenticationService, useClass: AuthenticationService),
-    const Provider(AlertService, useClass: AlertService)
+    const Provider(AlertService, useClass: AlertService),
+    const Provider(ResourcesLoaderService, useClass: ResourcesLoaderService)
     ]
 )
 
