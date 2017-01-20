@@ -38,11 +38,7 @@ class AppComponent implements AfterViewInit {
 
   bool isAuth = false;
 
-  AppComponent(this._alertService, this._authService) {
-
-  }
-
-
+  AppComponent(this._alertService, this._authService) {}
 
   @override
   void ngAfterViewInit() {
