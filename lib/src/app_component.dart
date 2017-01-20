@@ -15,8 +15,6 @@ import 'package:auth_router_outlet/auth_router_outlet.dart';
 
 import 'package:resources_loader/resources_loader.dart';
 
-@Injectable()
-class ResourcesLoaderService extends ResourcesLoader {}
 
 @Component(
     selector: 'cmas-app',
