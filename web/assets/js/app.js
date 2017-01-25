@@ -85,7 +85,7 @@ $(document).ready(function($){
 			resizeBroadcast();
 
 		} else if ($(this).hasClass('layout-toggler') && ($('body').hasClass('sidebar-nav') || bodyClass == 'sidebar-nav')) {
-			$('body').toggleClass('compact-nav');
+			$('body').toggleClass('sidebar-nav');
 			localStorage.setItem('body-class', 'sidebar-nav');
 			if (bodyClass == 'sidebar-nav') {
 				localStorage.clear();
