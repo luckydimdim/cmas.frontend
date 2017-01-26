@@ -6,7 +6,7 @@
  * Copyright (c) 2016 creativeLabs ┼Бukasz Holeczek
  * @license Commercial
  */
-/*$navbar-brand-logo:                 url('/img/logo.png');*/
+/*$navbar-brand-logo:                 none;*/
 /*! normalize.css v4.2.0 | MIT License | github.com/necolas/normalize.css */
 html {
   font-family: sans-serif;
@@ -3125,7 +3125,7 @@ header.navbar {
     height: 55px;
     padding: 0.5rem 1rem;
     background-color: #20a8d8;
-    background-image: none;
+    background-image: url("/img/logo.png");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: 70px auto;
