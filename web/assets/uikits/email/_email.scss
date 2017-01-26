@@ -3,6 +3,11 @@
     background: #fff;
     border: 1px solid $border-color;
 
+    .nav-wrapper {
+        position: fixed;
+        height: 100%;
+    }
+
     nav {
         position: absolute !important;
         top: 0;
@@ -55,6 +60,7 @@
 
     main {
         padding: 15px 15px 15px 255px;
+        height: 100vh;
 
         .toolbar {
             margin: -15px -15px 15px -15px;
