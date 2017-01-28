@@ -27,6 +27,17 @@ dependencies:
 dev_dependencies:
     test: ^0.12.18                        # A library for writing dart unit tests. https://pub.dartlang.org/packages/test
     yaml: ^2.1.12                         # A parser for YAML. https://pub.dartlang.org/packages/yaml
+dependency_overrides:
+    bower_installer:
+      git: git@github.com:luckydimdim/bower_installer.frontend.git
+    alert:
+      git: git@github.com:luckydimdim/alert.frontend.git
+    master:
+      git: git@github.com:luckydimdim/master.frontend.git
+    auth_router_outlet:
+      git: git@github.com:luckydimdim/auth_router_outlet.frontend.git
+    resources_loader:
+      git: git@github.com:luckydimdim/resources_loader.frontend.git
 
 # Used to configure dart2js or other transformers
 transformers:
