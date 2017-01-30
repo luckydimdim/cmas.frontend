@@ -14,24 +14,24 @@ dependencies:
     angular2: ^2.2.0                      # Dart implementation of the Angular web framework. https://pub.dartlang.org/packages/angular2
     browser: ^0.10.0+2                    # The bootstrap dart.js script for Dart apps running in the browser. https://pub.dartlang.org/packages/browser
     dart_to_js_script_rewriter: ^1.0.2    # Replaces Dart script tags with JavaScript script tags. https://pub.dartlang.org/packages/dart_to_js_script_rewriter
-    bower_installer:
-      git: https://github.com/luckydimdim/bower_installer.frontend.git
-      #git: http://cm-ylng-msk-04/git/bower_installer.frontend.git
     alert:
-      git: https://github.com/luckydimdim/alert.frontend.git
-      #git: http://cm-ylng-msk-04/git/alert.frontend.git
+      #git: https://github.com/luckydimdim/alert.frontend.git
+      git: http://cm-ylng-msk-04/git/alert.frontend.git
     master:
-      git: https://github.com/luckydimdim/master.frontend.git
-      #git: http://cm-ylng-msk-04/git/master.frontend.git
+      #git: https://github.com/luckydimdim/master.frontend.git
+      git: http://cm-ylng-msk-04/git/master.frontend.git
     auth_router_outlet:
-      git: https://github.com/luckydimdim/auth_router_outlet.frontend.git
-      #git: http://cm-ylng-msk-04/git/auth_router_outlet.frontend.git
+      #git: https://github.com/luckydimdim/auth_router_outlet.frontend.git
+      git: http://cm-ylng-msk-04/git/auth_router_outlet.frontend.git
     resources_loader:
-      git: https://github.com/luckydimdim/resources_loader.frontend.git
-      #git: http://cm-ylng-msk-04/git/resources_loader.frontend.git
+      #git: https://github.com/luckydimdim/resources_loader.frontend.git
+      git: http://cm-ylng-msk-04/git/resources_loader.frontend.git
 dev_dependencies:
     test: ^0.12.18                        # A library for writing dart unit tests. https://pub.dartlang.org/packages/test
     yaml: ^2.1.12                         # A parser for YAML. https://pub.dartlang.org/packages/yaml      
+    bower_installer:
+      #git: https://github.com/luckydimdim/bower_installer.frontend.git
+      git: http://cm-ylng-msk-04/git/bower_installer.frontend.git    
 
 # Used to configure dart2js or other transformers
 transformers:
