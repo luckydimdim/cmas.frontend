@@ -24,6 +24,8 @@
 
   function resizeBroadcast() {
 
+  	return; // зачем это?? IE не одобряет
+
     var timesRun = 0;
     var interval = setInterval(function(){
       timesRun += 1;
