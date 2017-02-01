@@ -26,12 +26,13 @@ dependencies:
     resources_loader:
       #git: https://github.com/luckydimdim/resources_loader.frontend.git
       git: http://cm-ylng-msk-04/git/resources_loader.frontend.git
+    bower_installer:
+      #git: https://github.com/luckydimdim/bower_installer.frontend.git
+      git: http://cm-ylng-msk-04/git/bower_installer.frontend.git
 dev_dependencies:
     test: ^0.12.18                        # A library for writing dart unit tests. https://pub.dartlang.org/packages/test
     yaml: ^2.1.12                         # A parser for YAML. https://pub.dartlang.org/packages/yaml      
-    bower_installer:
-      #git: https://github.com/luckydimdim/bower_installer.frontend.git
-      git: http://cm-ylng-msk-04/git/bower_installer.frontend.git    
+
 
 # Used to configure dart2js or other transformers
 transformers:
