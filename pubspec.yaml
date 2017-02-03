@@ -44,9 +44,6 @@ dependencies:
     request:
       #git: https://github.com/luckydimdim/request.frontend.git
       git: http://cm-ylng-msk-04/git/request.frontend.git
-    contract_budget:
-      #git: https://github.com/luckydimdim/contract_budget.frontend.git
-      git: http://cm-ylng-msk-04/git/contract_budget.frontend.git
     object_budget_list:
       #git: https://github.com/luckydimdim/object_budget_list.frontend.git
       git: http://cm-ylng-msk-04/git/object_budget_list.frontend.git
