@@ -9,7 +9,7 @@ import 'package:auth/auth_component.dart';
 
 import 'package:alert/alert_service.dart';
 import 'package:alert/alert_component.dart';
-import 'package:master/master_component.dart';
+import 'master/master_component.dart';
 
 import 'package:auth_router_outlet/auth_router_outlet.dart';
 

@@ -17,15 +17,56 @@ dependencies:
     alert:
       #git: https://github.com/luckydimdim/alert.frontend.git
       git: http://cm-ylng-msk-04/git/alert.frontend.git
-    master:
-      #git: https://github.com/luckydimdim/master.frontend.git
-      git: http://cm-ylng-msk-04/git/master.frontend.git
     auth_router_outlet:
       #git: https://github.com/luckydimdim/auth_router_outlet.frontend.git
       git: http://cm-ylng-msk-04/git/auth_router_outlet.frontend.git
     resources_loader:
       #git: https://github.com/luckydimdim/resources_loader.frontend.git
       git: http://cm-ylng-msk-04/git/resources_loader.frontend.git
+    bower_installer:
+      #git: https://github.com/luckydimdim/bower_installer.frontend.git
+      git: http://cm-ylng-msk-04/git/bower_installer.frontend.git
+    contract:
+      #git: https://github.com/luckydimdim/contract.frontend.git
+      git: http://cm-ylng-msk-04/git/contract.frontend.git
+    contract_list:
+      #git: https://github.com/luckydimdim/contract_list.frontend.git
+      git: http://cm-ylng-msk-04/git/contract_list.frontend.git
+    dashboard:
+      #git: https://github.com/luckydimdim/dashboard.frontend.git
+      git: http://cm-ylng-msk-04/git/dashboard.frontend.git
+    auth_router_outlet:
+      #git: https://github.com/luckydimdim/auth_router_outlet.frontend.git
+      git: http://cm-ylng-msk-04/git/auth_router_outlet.frontend.git
+    request_list:
+      #git: https://github.com/luckydimdim/request_list.frontend.git
+      git: http://cm-ylng-msk-04/git/request_list.frontend.git
+    request:
+      #git: https://github.com/luckydimdim/request.frontend.git
+      git: http://cm-ylng-msk-04/git/request.frontend.git
+    contract_budget:
+      #git: https://github.com/luckydimdim/contract_budget.frontend.git
+      git: http://cm-ylng-msk-04/git/contract_budget.frontend.git
+    object_budget_list:
+      #git: https://github.com/luckydimdim/object_budget_list.frontend.git
+      git: http://cm-ylng-msk-04/git/object_budget_list.frontend.git
+    payment_budget_list:
+      #git: https://github.com/luckydimdim/payment_budget_list.frontend.git
+      git: http://cm-ylng-msk-04/git/payment_budget_list.frontend.git
+    object_list:
+      #git: https://github.com/luckydimdim/object_list.frontend.git
+      git: http://cm-ylng-msk-04/git/object_list.frontend.git
+    contractor_list:
+      #git: https://github.com/luckydimdim/contractor_list.frontend.git
+      git: http://cm-ylng-msk-04/git/contractor_list.frontend.git
+    resources_loader:
+      #git: https://github.com/luckydimdim/resources_loader.frontend.git
+      git: http://cm-ylng-msk-04/git/resources_loader.frontend.git
+    analytics:
+      #git: https://github.com/luckydimdim/analytics.frontend.git
+      git: http://cm-ylng-msk-04/git/analytics.frontend.git
+    object_budget:
+       git: http://cm-ylng-msk-04/git/object_budget.frontend.git
     bower_installer:
       #git: https://github.com/luckydimdim/bower_installer.frontend.git
       git: http://cm-ylng-msk-04/git/bower_installer.frontend.git
