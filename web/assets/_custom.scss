@@ -1,4 +1,4 @@
-.timesheet .card-block {
+﻿.timesheet .card-block {
   border-top: 1px solid #d1d4d7;
 }
 
@@ -117,4 +117,9 @@
 
 .timesheet td.bordered-l-g-sm {
   border-left: 1px solid #d1d4d7;
+}
+
+body:not(.top-nav) ul.nav li.nav-item a.nav-link.router-link-active {
+    color: #fff !important;
+    background: #20a8d8;
 }
