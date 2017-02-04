@@ -74,7 +74,7 @@ dev_dependencies:
 
 # Used to configure dart2js or other transformers
 transformers:
-    - bower_installer
+    #- bower_installer
     - angular2:
         platform_directives:
           - package:angular2/common.dart#COMMON_DIRECTIVES
