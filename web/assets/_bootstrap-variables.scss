@@ -8,6 +8,7 @@ $gray-dark:                 #2a2c36;
 $gray:                      #55595c;
 $gray-light:                #818a91;
 $gray-lighter:              #d1d4d7;
+$gray-silver:               #f6f6f6;
 $gray-lightest:             #f8f9fa;
 
 $brand-primary:             #20a8d8;
@@ -96,4 +97,4 @@ $progress-bg:                   $gray-lightest;
 // Tables
 
 $table-bg-accent:               $gray-lightest;
-$table-bg-hover:                $gray-lightest;
+$table-bg-hover:                $gray-silver;

@@ -58,5 +58,10 @@ class MasterComponent implements AfterViewInit {
       ..type = 'text/javascript'
       ..src = 'assets/js/app.js';
     document.body.append(script);
+
+    /*var search = querySelextor('[main-search') as DivElement;
+    search.onKeyPress.listen((KeyboardEvent e) {
+
+    });*/
   }
 }
