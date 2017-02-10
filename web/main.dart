@@ -7,8 +7,7 @@ import 'package:angular2/src/core/reflection/reflection.dart';
 import 'package:cmas/app_component.dart';
 
 bool get isDebug =>
-    (const String.fromEnvironment("PRODUCTION", defaultValue: "false")) !=
-    "true";
+    (const String.fromEnvironment("PRODUCTION", defaultValue: "false")) != "true";
 
 main() async {
   if (isDebug) {

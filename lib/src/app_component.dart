@@ -15,37 +15,43 @@ import 'package:auth_router_outlet/auth_router_outlet.dart';
 
 import 'package:resources_loader/resources_loader.dart';
 
+import 'package:bambarbiya/bambarbiya_service.dart';
+
+import 'package:bambarbiya/bambarbiya_directive.dart';
 
 @Component(
     selector: 'cmas-app',
     providers: const [
-    ROUTER_PROVIDERS,
-    const Provider(LocationStrategy, useClass: HashLocationStrategy),
-    const Provider(AuthenticationService, useClass: AuthenticationService),
-    const Provider(AlertService, useClass: AlertService),
-    const Provider(ResourcesLoaderService, useClass: ResourcesLoaderService)
-    ]
-)
+      ROUTER_PROVIDERS,
+      const Provider(LocationStrategy, useClass: HashLocationStrategy),
+      const Provider(AuthenticationService, useClass: AuthenticationService),
+      const Provider(AlertService, useClass: AlertService),
+      const Provider(ResourcesLoaderService, useClass: ResourcesLoaderService),
+      const Provider(BambarbiyaService, useClass: BambarbiyaService)])
 
 @View(
     templateUrl: 'app_component.html',
-    directives: const [MasterComponent, AlertComponent, AuthComponent, AuthRouterOutlet]
-)
+    directives: const [MasterComponent, AlertComponent, AuthComponent, AuthRouterOutlet, BambarbiyaDirective])
 
 @RouteConfig(const [AuthComponent.route, MasterComponent.route])
 class AppComponent implements AfterViewInit {
   final AlertService _alertService;
   final AuthenticationService _authService;
+  final BambarbiyaService _bambarba;
 
   bool isAuth = false;
 
-  AppComponent(this._alertService, this._authService) {}
+  AppComponent(this._alertService, this._authService, this._bambarba) {}
 
   @override
   void ngAfterViewInit() {
-    if (_authService.isAuth())
+    _bambarba.kergudu();
+
+    if (_authService.isAuth()){
       isAuth = true;
-    else
+      //await _bambarba.ailyulyu();
+    } else {
       isAuth = false;
+    }
   }
 }
