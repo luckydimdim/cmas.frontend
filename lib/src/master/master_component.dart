@@ -17,13 +17,19 @@ import 'package:object_list/object_list_component.dart';
 import 'package:contractor_list/contractor_list_component.dart';
 import 'package:analytics/analytics_component.dart';
 import 'package:object_budget/object_budget_component.dart';
+import 'package:master_layout/master_layout_component.dart';
 
 import '../breadcrumb_component.dart';
 
 @Component(selector: 'master')
 @View(
     templateUrl: 'master_component.html',
-    directives: const [RouterLink, AlertComponent, RouterOutlet, BreadcrumbComponent])
+    directives: const [
+      RouterLink,
+      AlertComponent,
+      RouterOutlet,
+      BreadcrumbComponent,
+      MasterLayoutComponent])
 @RouteConfig(const [
   ContractComponent.route,
   DashboardComponent.route,
@@ -35,9 +41,8 @@ import '../breadcrumb_component.dart';
   ObjectListComponent.route,
   ObjectBudgetComponent.route,
   ContractorListComponent.route,
-  AnalyticsComponent.route
-])
-class MasterComponent implements AfterViewInit {
+  AnalyticsComponent.route])
+class MasterComponent {
   static const String route_name = "Master";
   static const String route_path = "master/...";
   static const Route route = const Route(
@@ -50,18 +55,4 @@ class MasterComponent implements AfterViewInit {
   final Router _router;
 
   MasterComponent(this._alertService, this._router) {}
-
-  @override
-  void ngAfterViewInit() {
-    var script = new ScriptElement()
-      ..async = true
-      ..type = 'text/javascript'
-      ..src = 'assets/js/app.js';
-    document.body.append(script);
-
-    /*var search = querySelextor('[main-search') as DivElement;
-    search.onKeyPress.listen((KeyboardEvent e) {
-
-    });*/
-  }
 }
