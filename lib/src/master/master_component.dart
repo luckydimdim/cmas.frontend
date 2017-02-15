@@ -19,8 +19,6 @@ import 'package:analytics/analytics_component.dart';
 import 'package:object_budget/object_budget_component.dart';
 import 'package:master_layout/master_layout_component.dart';
 
-import '../breadcrumb_component.dart';
-
 @Component(selector: 'master')
 @View(
     templateUrl: 'master_component.html',
@@ -28,7 +26,6 @@ import '../breadcrumb_component.dart';
       RouterLink,
       AlertComponent,
       RouterOutlet,
-      BreadcrumbComponent,
       MasterLayoutComponent])
 @RouteConfig(const [
   ContractComponent.route,
