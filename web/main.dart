@@ -1,5 +1,4 @@
 import 'dart:core';
-import 'dart:async';
 import 'package:angular2/platform/browser.dart';
 import 'package:angular2/core.dart';
 import 'package:angular2/src/core/reflection/reflection.dart';
@@ -10,15 +9,14 @@ bool get isDebug =>
     (const String.fromEnvironment('PRODUCTION', defaultValue: 'false')) !=
         'true';
 
-
 main() async {
   if (isDebug) {
     reflector.trackUsage();
   }
 
-  ComponentRef ref = await bootstrap(AppComponent/*, [BROWSER_APP_PROVIDERS,
-    const Provider(ExceptionHandler, useClass: AppExceptionHandler)
-  ]*/);
+  ComponentRef ref = await bootstrap(AppComponent, [BROWSER_APP_PROVIDERS,
+    const Provider(ExceptionHandler, useFactory: appExceptionHandler, deps: const [])
+  ]);
 
   if (isDebug) {
     print('Application in DebugMode');
