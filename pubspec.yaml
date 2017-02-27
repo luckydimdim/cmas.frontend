@@ -28,8 +28,6 @@ dependencies:
       git: http://cm-ylng-msk-04/git/contract_list.frontend.git
     dashboard:
       git: http://cm-ylng-msk-04/git/dashboard.frontend.git
-    auth_router_outlet:
-      git: http://cm-ylng-msk-04/git/auth_router_outlet.frontend.git
     request_list:
       git: http://cm-ylng-msk-04/git/request_list.frontend.git
     request:
