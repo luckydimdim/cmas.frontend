@@ -1,22 +1,24 @@
 import 'dart:core';
 import 'package:angular2/core.dart';
-import "package:angular2/src/platform/dom/dom_adapter.dart" show DOM;
+import 'package:angular2/src/platform/dom/dom_adapter.dart' show DOM;
+import 'package:logger/logger_service.dart';
 
 @Injectable()
 AppExceptionHandler appExceptionHandler() {
-  return new AppExceptionHandler(DOM, false);
+  return new AppExceptionHandler(DOM, false, new LoggerService());
 }
 
-/*
-* Отлов ошибок, отправка их на сервер логирования
-* */
+/**
+ * Отлов ошибок, отправка их на сервер логирования
+ **/
 @Injectable()
 class AppExceptionHandler extends ExceptionHandler {
-  dynamic _logger;
+  dynamic _dom;
   bool _rethrowException;
+  final LoggerService _logger;
 
-  AppExceptionHandler(this._logger, [this._rethrowException = true])
-      : super(_logger, _rethrowException);
+  AppExceptionHandler(this._dom, [this._rethrowException = true, this._logger = null])
+      : super(_dom, _rethrowException);
 
   void call(dynamic exception,
       [dynamic stackTrace = null, String reason = null]) {
@@ -28,7 +30,8 @@ class AppExceptionHandler extends ExceptionHandler {
   void sendToServer(dynamic exception,
       [dynamic stackTrace = null, String reason = null]) {
     try {
-      /* send log to server or save to local storage */
+      if (_logger != null)
+        _logger.error('stackTrace: $stackTrace, exception: $exception');
     }
     catch (e) {
       print('error while sending logs to server: $e');
