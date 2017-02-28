@@ -6,9 +6,8 @@ import 'package:angular2/router.dart';
 import 'package:alert/alert_service.dart';
 import 'package:alert/alert_component.dart';
 
-import 'package:contract/contract_component.dart';
+import 'package:contracts/contracts_component.dart';
 import 'package:dashboard/dashboard_component.dart';
-import 'package:contract_list/contract_list_component.dart';
 import 'package:object_budget_list/object_budget_list_component.dart';
 import 'package:payment_budget_list/payment_budget_list_component.dart';
 import 'package:request_list/request_list_component.dart';
@@ -28,9 +27,11 @@ import 'package:master_layout/master_layout_component.dart';
       RouterOutlet,
       MasterLayoutComponent])
 @RouteConfig(const [
-  ContractComponent.route,
+const Route(
+    path: 'contracts/...',
+    component: ContractsComponent,
+    name: 'Contracts'),
   DashboardComponent.route,
-  ContractListComponent.route,
   ObjectBudgetListComponent.route,
   PaymentBudgetListComponent.route,
   RequestListComponent.route,
@@ -41,7 +42,7 @@ import 'package:master_layout/master_layout_component.dart';
   AnalyticsComponent.route])
 class MasterComponent {
   static const String route_name = "Master";
-  static const String route_path = "master/...";
+  static const String route_path = "/...";
   static const Route route = const Route(
       path: MasterComponent.route_path,
       component: MasterComponent,

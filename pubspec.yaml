@@ -22,10 +22,8 @@ dependencies:
       git: http://cm-ylng-msk-04/git/resources_loader.frontend.git
     bower_installer:
       git: http://cm-ylng-msk-04/git/bower_installer.frontend.git
-    contract:
-      git: http://cm-ylng-msk-04/git/contract.frontend.git
-    contract_list:
-      git: http://cm-ylng-msk-04/git/contract_list.frontend.git
+    contracts:
+      git: http://cm-ylng-msk-04/git/contracts.frontend.git
     dashboard:
       git: http://cm-ylng-msk-04/git/dashboard.frontend.git
     request_list:
