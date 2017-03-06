@@ -1,11 +1,12 @@
 import 'dart:core';
 import 'package:angular2/core.dart';
 import 'package:angular2/src/platform/dom/dom_adapter.dart' show DOM;
+import 'package:config/config_service.dart';
 import 'package:logger/logger_service.dart';
 
 @Injectable()
-AppExceptionHandler appExceptionHandler() {
-  return new AppExceptionHandler(DOM, false, new LoggerService());
+AppExceptionHandler appExceptionHandler(ConfigService config) {
+  return new AppExceptionHandler(DOM, false, new LoggerService(config));
 }
 
 /**

@@ -5,8 +5,10 @@ import 'package:angular2/src/core/reflection/reflection.dart';
 import 'package:cmas/app_component.dart';
 import 'package:cmas/app_exception_handler.dart';
 
+import 'package:config/config_service.dart';
 import 'package:http/http.dart';
 import 'package:http/browser_client.dart';
+import 'package:logger/logger_service.dart';
 
 bool get isDebug =>
     (const String.fromEnvironment('PRODUCTION', defaultValue: 'false')) !=
@@ -18,7 +20,9 @@ main() async {
   }
 
   ComponentRef ref = await bootstrap(AppComponent, [BROWSER_APP_PROVIDERS,
-    const Provider(ExceptionHandler, useFactory: appExceptionHandler, deps: const []),
+    const Provider(ExceptionHandler, useFactory: appExceptionHandler, deps: const [ConfigService]),
+    const Provider(LoggerService),
+    const Provider(ConfigService),
     provide(Client, useFactory: () => new BrowserClient(), deps: [])
   ]);
 
