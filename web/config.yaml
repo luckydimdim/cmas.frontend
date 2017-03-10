@@ -2,13 +2,13 @@
 production: false
 
 # Minimal log level
-log_level: trace
+log_level: error
 
 # Backend url
-backend_scheme: http             # Scheme
-backend_base_url: cm-ylng-msk-01 # Base service url
-backend_port: 80                 # Backend port
+backend_scheme: http               # Scheme
+backend_base_url: 'cm-ylng-msk-01' # Base service url
+backend_port: '80'                 # Backend port
 
 # API urls
-backend_contracts: contracts
+backend_contracts: 'cmas-backend/contracts'
 backend_logs: log
