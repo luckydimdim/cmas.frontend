@@ -12,4 +12,4 @@ backend_port: '80'                 # Backend port
 # API urls
 backend_contracts: 'cmas-backend/contracts'
 backend_logs: log
-backend_call_off_orders: call-off-orders
+backend_call_off_orders: 'cmas-backend/call-off-orders'
