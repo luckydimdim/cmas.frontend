@@ -26,10 +26,8 @@ dependencies:
       git: http://cm-ylng-msk-04/git/contracts.frontend.git
     dashboard:
       git: http://cm-ylng-msk-04/git/dashboard.frontend.git
-    request_list:
-      git: http://cm-ylng-msk-04/git/request_list.frontend.git
-    request:
-      git: http://cm-ylng-msk-04/git/request.frontend.git
+    requests:
+      git: http://cm-ylng-msk-04/git/requests.frontend.git
     object_budget_list:
       git: http://cm-ylng-msk-04/git/object_budget_list.frontend.git
     payment_budget_list:
@@ -48,6 +46,8 @@ dependencies:
       git: http://cm-ylng-msk-04/git/master_layout.frontend.git
     logger:
       git: http://cm-ylng-msk-04/git/logger.frontend.git
+    aside:
+      git: http://cm-ylng-msk-04/git/aside.frontend.git
 dev_dependencies:
     test: ^0.12.18                        # A library for writing dart unit tests. https://pub.dartlang.org/packages/test
     yaml: ^2.1.12                         # A parser for YAML. https://pub.dartlang.org/packages/yaml

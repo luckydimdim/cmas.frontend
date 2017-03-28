@@ -9,6 +9,7 @@ import 'package:config/config_service.dart';
 import 'package:http/http.dart';
 import 'package:http/browser_client.dart';
 import 'package:logger/logger_service.dart';
+import 'package:aside/aside_service.dart';
 
 bool get isDebug =>
     (const String.fromEnvironment('PRODUCTION', defaultValue: 'false')) !=
@@ -23,6 +24,7 @@ main() async {
     const Provider(ExceptionHandler, useFactory: appExceptionHandler, deps: const [ConfigService]),
     const Provider(LoggerService),
     const Provider(ConfigService),
+    const Provider(AsideService),
     provide(Client, useFactory: () => new BrowserClient(), deps: [])
     // provide(Client, useClass: InMemoryDataService)
     // Using a real back end?
