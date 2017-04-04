@@ -15,23 +15,19 @@ import 'package:auth_router_outlet/auth_router_outlet.dart';
 
 import 'package:resources_loader/resources_loader.dart';
 
-
-@Component(
-    selector: 'cmas-app',
-    providers: const [
-    ROUTER_PROVIDERS,
-    const Provider(LocationStrategy, useClass: HashLocationStrategy),
-    const Provider(AuthenticationService, useClass: AuthenticationService),
-    const Provider(AlertService, useClass: AlertService),
-    const Provider(ResourcesLoaderService, useClass: ResourcesLoaderService)
-    ]
-)
-
-@View(
-    templateUrl: 'app_component.html',
-    directives: const [MasterComponent, AlertComponent, AuthComponent, AuthRouterOutlet]
-)
-
+@Component(selector: 'cmas-app', providers: const [
+  ROUTER_PROVIDERS,
+  const Provider(LocationStrategy, useClass: HashLocationStrategy),
+  const Provider(AuthenticationService, useClass: AuthenticationService),
+  const Provider(AlertService, useClass: AlertService),
+  const Provider(ResourcesLoaderService, useClass: ResourcesLoaderService)
+])
+@View(templateUrl: 'app_component.html', directives: const [
+  MasterComponent,
+  AlertComponent,
+  AuthComponent,
+  AuthRouterOutlet
+])
 @RouteConfig(const [AuthComponent.route, MasterComponent.route])
 class AppComponent implements AfterViewInit {
   final AlertService _alertService;

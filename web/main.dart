@@ -13,15 +13,17 @@ import 'package:aside/aside_service.dart';
 
 bool get isDebug =>
     (const String.fromEnvironment('PRODUCTION', defaultValue: 'false')) !=
-        'true';
+    'true';
 
 main() async {
   if (isDebug) {
     reflector.trackUsage();
   }
 
-  ComponentRef ref = await bootstrap(AppComponent, [BROWSER_APP_PROVIDERS,
-    const Provider(ExceptionHandler, useFactory: appExceptionHandler, deps: const [ConfigService]),
+  ComponentRef ref = await bootstrap(AppComponent, [
+    BROWSER_APP_PROVIDERS,
+    const Provider(ExceptionHandler,
+        useFactory: appExceptionHandler, deps: const [ConfigService]),
     const Provider(LoggerService),
     const Provider(ConfigService),
     const Provider(AsideService),

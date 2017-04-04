@@ -16,29 +16,25 @@ import 'package:object_budget/object_budget_component.dart';
 import 'package:master_layout/master_layout_component.dart';
 
 @Component(selector: 'master')
-@View(
-    templateUrl: 'master_component.html',
-    directives: const [
-      RouterLink,
-      AlertComponent,
-      RouterOutlet,
-      MasterLayoutComponent])
+@View(templateUrl: 'master_component.html', directives: const [
+  RouterLink,
+  AlertComponent,
+  RouterOutlet,
+  MasterLayoutComponent
+])
 @RouteConfig(const [
-const Route(
-    path: 'contracts/...',
-    component: ContractsComponent,
-    name: 'Contracts'),
+  const Route(
+      path: 'contracts/...', component: ContractsComponent, name: 'Contracts'),
   DashboardComponent.route,
   ObjectBudgetListComponent.route,
   PaymentBudgetListComponent.route,
-const Route(
-  path: 'requests/...',
-  component: ContractsComponent,
-  name: 'Requests'),
+  const Route(
+      path: 'requests/...', component: RequestsComponent, name: 'Requests'),
   ObjectListComponent.route,
   ObjectBudgetComponent.route,
   ContractorListComponent.route,
-  AnalyticsComponent.route])
+  AnalyticsComponent.route
+])
 class MasterComponent {
   static const String route_name = 'Master';
   static const String route_path = '/...';

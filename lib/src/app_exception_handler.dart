@@ -18,7 +18,8 @@ class AppExceptionHandler extends ExceptionHandler {
   bool _rethrowException;
   final LoggerService _logger;
 
-  AppExceptionHandler(this._dom, [this._rethrowException = true, this._logger = null])
+  AppExceptionHandler(this._dom,
+      [this._rethrowException = true, this._logger = null])
       : super(_dom, _rethrowException);
 
   void call(dynamic exception,
@@ -33,8 +34,7 @@ class AppExceptionHandler extends ExceptionHandler {
     try {
       if (_logger != null)
         _logger.error('stackTrace: $stackTrace, exception: $exception');
-    }
-    catch (e) {
+    } catch (e) {
       print('error while sending logs to server: $e');
     }
   }
