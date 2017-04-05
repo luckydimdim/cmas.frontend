@@ -1,7 +1,6 @@
 import 'package:angular2/core.dart';
 import 'package:angular2/router.dart';
 
-import 'package:alert/alert_service.dart';
 import 'package:alert/alert_component.dart';
 
 import 'package:contracts/contracts_component.dart';
@@ -36,16 +35,5 @@ import 'package:master_layout/master_layout_component.dart';
   AnalyticsComponent.route
 ])
 class MasterComponent {
-  static const String route_name = 'Master';
-  static const String route_path = '/...';
-  static const Route route = const Route(
-      path: MasterComponent.route_path,
-      component: MasterComponent,
-      name: MasterComponent.route_name,
-      useAsDefault: true);
-
-  final AlertService _alertService;
-  final Router _router;
-
-  MasterComponent(this._alertService, this._router) {}
+  MasterComponent() {}
 }

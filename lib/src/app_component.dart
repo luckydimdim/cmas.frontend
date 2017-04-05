@@ -1,5 +1,3 @@
-import 'dart:html';
-
 import 'package:angular2/core.dart';
 import 'package:angular2/platform/common.dart';
 import 'package:angular2/router.dart';
@@ -28,14 +26,20 @@ import 'package:resources_loader/resources_loader.dart';
   AuthComponent,
   AuthRouterOutlet
 ])
-@RouteConfig(const [AuthComponent.route, MasterComponent.route])
+@RouteConfig(const [
+  const Route(
+      path: '/...',
+      component: MasterComponent,
+      name: 'Master',
+      useAsDefault: true),
+  const Route(path: 'auth', component: AuthComponent, name: 'Auth')
+])
 class AppComponent implements AfterViewInit {
-  final AlertService _alertService;
   final AuthenticationService _authService;
 
   bool isAuth = false;
 
-  AppComponent(this._alertService, this._authService) {}
+  AppComponent(this._authService) {}
 
   @override
   void ngAfterViewInit() {
