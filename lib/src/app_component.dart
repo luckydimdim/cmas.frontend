@@ -13,6 +13,8 @@ import 'package:auth_router_outlet/auth_router_outlet.dart';
 
 import 'package:resources_loader/resources_loader.dart';
 
+const String authPath = 'auth';
+
 @Component(selector: 'cmas-app', providers: const [
   ROUTER_PROVIDERS,
   const Provider(LocationStrategy, useClass: HashLocationStrategy),
@@ -32,14 +34,16 @@ import 'package:resources_loader/resources_loader.dart';
       component: MasterComponent,
       name: 'Master',
       useAsDefault: true),
-  const Route(path: 'auth', component: AuthComponent, name: 'Auth')
+  const Route(path: authPath, component: AuthComponent, name: 'Auth')
 ])
 class AppComponent implements AfterViewInit {
   final AuthenticationService _authService;
 
   bool isAuth = false;
 
-  AppComponent(this._authService) {}
+  AppComponent(this._authService) {
+    _authService.authPath = authPath;
+  }
 
   @override
   void ngAfterViewInit() {
