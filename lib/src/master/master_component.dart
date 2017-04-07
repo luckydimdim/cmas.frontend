@@ -23,12 +23,12 @@ import 'package:master_layout/master_layout_component.dart';
 ])
 @RouteConfig(const [
   const Route(
-      path: 'contracts/...', component: ContractsComponent, name: 'Contracts'),
+      path: 'contracts/...', component: ContractsComponent, name: 'Contracts', data: ContractsComponent.DisplayName),
   DashboardComponent.route,
   ObjectBudgetListComponent.route,
   PaymentBudgetListComponent.route,
   const Route(
-      path: 'requests/...', component: RequestsComponent, name: 'Requests'),
+      path: 'requests/...', component: RequestsComponent, name: 'Requests', data: RequestsComponent.DisplayName),
   ObjectListComponent.route,
   ObjectBudgetComponent.route,
   ContractorListComponent.route,
