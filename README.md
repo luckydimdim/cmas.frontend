@@ -6,3 +6,6 @@
 3) задать следующие аргументы --no-cache --update $FileName$:$FileNameWithoutExtension$.css -I $ContentRoot$\web
 4) указать output path $FileNameWithoutExtension$.css:$FileNameWithoutExtension$.css.map
 5) снять чекбок "track only root files"
+
+Сборка для выкладки:
+pub build --mode=release -DPRODUCTION=true
