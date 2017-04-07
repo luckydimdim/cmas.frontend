@@ -19,8 +19,6 @@ dependencies:
       git: http://cm-ylng-msk-04/git/alert.frontend.git
     auth_router_outlet:
       git: http://cm-ylng-msk-04/git/auth_router_outlet.frontend.git
-    resources_loader:
-      git: http://cm-ylng-msk-04/git/resources_loader.frontend.git
     bower_installer:
       git: http://cm-ylng-msk-04/git/bower_installer.frontend.git
     contracts:
