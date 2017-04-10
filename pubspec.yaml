@@ -71,7 +71,5 @@ transformers:
     - dart_to_js_script_rewriter
     - $dart2js:
         commandLineOptions:
-            - --trust-type-annotations
-            - --trust-primitives
-            - --show-package-warnings # Show warnings and hints generated from packages.
-            - --enable-experimental-mirrors
+            - --trust-type-annotations  # http://dovdev.com/get-the-most-out-of-dart2js-with-a-little-trust/
+            - --trust-primitives        # http://dovdev.com/get-the-most-out-of-dart2js-with-a-little-trust/
