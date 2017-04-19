@@ -11,7 +11,7 @@ AppExceptionHandler appExceptionHandler(ConfigService config) {
 
 /**
  * Отлов ошибок, отправка их на сервер логирования
- **/
+ */
 @Injectable()
 class AppExceptionHandler extends ExceptionHandler {
   dynamic _dom;
