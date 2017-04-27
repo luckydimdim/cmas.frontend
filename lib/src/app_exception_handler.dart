@@ -5,6 +5,7 @@ import 'package:config/config_service.dart';
 import 'package:logger/logger_service.dart';
 import 'package:http_wrapper/exceptions.dart';
 import 'package:angular2/router.dart';
+import 'package:auth/auth_service.dart';
 
 @Injectable()
 AppExceptionHandler appExceptionHandler(ConfigService config, Injector injector) {
@@ -49,9 +50,14 @@ class AppExceptionHandler extends ExceptionHandler {
   bool handleException(dynamic exception) {
 
     if (exception is UnauthorizedError) {
-      print('UnauthorizedError handled!');
 
-      Router router =  this._injector.get(Router);
+      if (_injector == null )
+        return false;
+
+      Router router =  _injector.get(Router);
+      AuthenticationService authenticationService =  _injector.get(AuthenticationService);
+
+      authenticationService.logout();
 
       router.navigate(['Auth', {'url':router.lastNavigationAttempt}] );
 
