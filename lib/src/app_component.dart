@@ -1,9 +1,9 @@
 import 'package:angular2/core.dart';
-import 'package:angular2/platform/common.dart';
 import 'package:angular2/router.dart';
 
 import 'package:auth/auth_service.dart';
 import 'package:auth/auth_component.dart';
+
 
 import 'package:alert/alert_service.dart';
 import 'package:alert/alert_component.dart';
@@ -16,9 +16,7 @@ import 'package:resources_loader/resources_loader.dart';
 const String authPath = 'auth';
 
 @Component(selector: 'cmas-app', providers: const [
-  ROUTER_PROVIDERS,
-  const Provider(LocationStrategy, useClass: HashLocationStrategy),
-  const Provider(AuthenticationService, useClass: AuthenticationService),
+
   const Provider(AlertService, useClass: AlertService),
   const Provider(ResourcesLoaderService, useClass: ResourcesLoaderService)
 ])

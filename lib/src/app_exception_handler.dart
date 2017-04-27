@@ -3,10 +3,12 @@ import 'package:angular2/core.dart';
 import 'package:angular2/src/platform/dom/dom_adapter.dart' show DOM;
 import 'package:config/config_service.dart';
 import 'package:logger/logger_service.dart';
+import 'package:http_wrapper/exceptions.dart';
+import 'package:angular2/router.dart';
 
 @Injectable()
-AppExceptionHandler appExceptionHandler(ConfigService config) {
-  return new AppExceptionHandler(DOM, false, new LoggerService(config));
+AppExceptionHandler appExceptionHandler(ConfigService config, Injector injector) {
+  return new AppExceptionHandler(DOM, false, new LoggerService(config), injector);
 }
 
 /**
@@ -17,13 +19,18 @@ class AppExceptionHandler extends ExceptionHandler {
   dynamic _dom;
   bool _rethrowException;
   final LoggerService _logger;
+  final Injector _injector;
 
   AppExceptionHandler(this._dom,
-      [this._rethrowException = true, this._logger = null])
+      [this._rethrowException = true, this._logger = null, this._injector = null])
       : super(_dom, _rethrowException);
 
   void call(dynamic exception,
       [dynamic stackTrace = null, String reason = null]) {
+
+    if (handleException(exception))
+      return;
+
     sendToServer(exception, stackTrace, reason);
 
     super.call(exception, stackTrace, reason);
@@ -38,4 +45,20 @@ class AppExceptionHandler extends ExceptionHandler {
       print('error while sending logs to server: $e');
     }
   }
+
+  bool handleException(dynamic exception) {
+
+    if (exception is UnauthorizedError) {
+      print('UnauthorizedError handled!');
+
+      Router router =  this._injector.get(Router);
+
+      router.navigate(['Auth', {'url':router.lastNavigationAttempt}] );
+
+      return true;
+    }
+
+    return false;
+  }
+
 }
