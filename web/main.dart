@@ -34,6 +34,7 @@ main() async {
     const Provider(ConfigService),
     const Provider(AsideService),
     const Provider(AuthenticationService),
+    const Provider(AuthorizationService),
     provide(Client, useFactory: () => new BrowserClient(), deps: []),
     provide(HttpWrapper, useFactory: (_http, _authenticationService) => new HttpWrapper(_http, _authenticationService), deps: [Client, AuthenticationService])
     // provide(Client, useClass: InMemoryDataService)
