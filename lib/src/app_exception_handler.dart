@@ -9,7 +9,7 @@ import 'package:auth/auth_service.dart';
 
 @Injectable()
 AppExceptionHandler appExceptionHandler(ConfigService config, Injector injector) {
-  return new AppExceptionHandler(false, new LoggerService(config), injector);
+  return new AppExceptionHandler(new LoggerService(config), injector);
 }
 
 /**
@@ -17,12 +17,11 @@ AppExceptionHandler appExceptionHandler(ConfigService config, Injector injector)
  */
 @Injectable()
 class AppExceptionHandler extends BrowserExceptionHandler {
-  bool _rethrowException;
   final LoggerService _logger;
   final Injector _injector;
 
   AppExceptionHandler(
-      [this._rethrowException = true, this._logger = null, this._injector = null])
+      [this._logger = null, this._injector = null])
       : super();
 
   void call(dynamic exception,

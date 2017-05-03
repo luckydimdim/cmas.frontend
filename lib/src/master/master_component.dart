@@ -14,8 +14,8 @@ import 'package:analytics/analytics_component.dart';
 import 'package:object_budget/object_budget_component.dart';
 import 'package:master_layout/master_layout_component.dart';
 
-@Component(selector: 'master')
-@View(templateUrl: 'master_component.html', directives: const [
+@Component(selector: 'master',
+    templateUrl: 'master_component.html', directives: const [
   RouterLink,
   AlertComponent,
   RouterOutlet,

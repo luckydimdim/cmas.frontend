@@ -15,16 +15,16 @@ import 'package:resources_loader/resources_loader.dart';
 
 const String authPath = 'auth';
 
-@Component(selector: 'cmas-app', providers: const [
-
+@Component(selector: 'cmas-app',
+    templateUrl: 'app_component.html', directives: const [
+      MasterComponent,
+      AlertComponent,
+      AuthComponent,
+      AuthRouterOutlet
+    ],
+    providers: const [
   const Provider(AlertService, useClass: AlertService),
   const Provider(ResourcesLoaderService, useClass: ResourcesLoaderService)
-])
-@View(templateUrl: 'app_component.html', directives: const [
-  MasterComponent,
-  AlertComponent,
-  AuthComponent,
-  AuthRouterOutlet
 ])
 @RouteConfig(const [
   const Route(
