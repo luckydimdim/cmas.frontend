@@ -1,4 +1,5 @@
 import 'dart:core';
+import 'package:alert/alert_service.dart';
 import 'package:angular2/core.dart';
 import 'package:angular2/src/platform/browser/exceptions.dart';
 import 'package:config/config_service.dart';
@@ -53,6 +54,7 @@ class AppExceptionHandler extends BrowserExceptionHandler {
         return false;
 
       Router router =  _injector.get(Router);
+
       AuthenticationService authenticationService =  _injector.get(AuthenticationService);
 
       authenticationService.logout();
@@ -61,6 +63,19 @@ class AppExceptionHandler extends BrowserExceptionHandler {
 
       return true;
     }
+    else if (exception is  GeneralError) {
+      String message = (exception as  GeneralError).details;
+
+      AlertService alertService =  _injector.get(AlertService);
+      alertService.Danger('Ошибка: $message');
+      return true;
+    }
+    else if (exception is  InternalServerError) {
+      AlertService alertService =  _injector.get(AlertService);
+      alertService.Danger('Непредвиденная ошибка');
+      return true;
+    }
+
 
     return false;
   }

@@ -1,4 +1,5 @@
 import 'dart:core';
+import 'package:alert/alert_service.dart';
 import 'package:angular2/platform/browser.dart';
 import 'package:angular2/core.dart';
 import 'package:angular2/src/core/reflection/reflection.dart';
@@ -35,6 +36,7 @@ main() async {
     const Provider(AsideService),
     const Provider(AuthenticationService),
     const Provider(AuthorizationService),
+    const Provider(AlertService),
     provide(Client, useFactory: () => new BrowserClient(), deps: []),
     provide(HttpWrapper, useFactory: (_http, _authenticationService) => new HttpWrapper(_http, _authenticationService), deps: [Client, AuthenticationService])
     // provide(Client, useClass: InMemoryDataService)

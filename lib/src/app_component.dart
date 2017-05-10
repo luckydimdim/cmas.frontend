@@ -23,7 +23,6 @@ const String authPath = 'auth';
       AuthRouterOutlet
     ],
     providers: const [
-  const Provider(AlertService, useClass: AlertService),
   const Provider(ResourcesLoaderService, useClass: ResourcesLoaderService)
 ])
 @RouteConfig(const [
