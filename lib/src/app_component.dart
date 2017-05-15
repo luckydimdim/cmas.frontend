@@ -3,9 +3,8 @@ import 'package:angular2/router.dart';
 
 import 'package:auth/auth_service.dart';
 import 'package:auth/auth_component.dart';
+import 'package:auth/activation_component.dart';
 
-
-import 'package:alert/alert_service.dart';
 import 'package:alert/alert_component.dart';
 import 'master/master_component.dart';
 
@@ -20,6 +19,7 @@ const String authPath = 'auth';
       MasterComponent,
       AlertComponent,
       AuthComponent,
+      ActivationComponent,
       AuthRouterOutlet
     ],
     providers: const [
@@ -31,7 +31,8 @@ const String authPath = 'auth';
       component: MasterComponent,
       name: 'Master',
       useAsDefault: true),
-  const Route(path: authPath, component: AuthComponent, name: 'Auth')
+  const Route(path: authPath, component: AuthComponent, name: 'Auth'),
+  const Route(path: 'activation', component: ActivationComponent, name: 'Activation')
 ])
 class AppComponent implements AfterViewInit {
   final AuthenticationService _authService;
