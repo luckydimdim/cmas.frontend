@@ -75,7 +75,14 @@ class AppExceptionHandler extends BrowserExceptionHandler {
       alertService.Danger('Непредвиденная ошибка');
       return true;
     }
-
+    else if (exception is ConnectionError) {
+      AlertService alertService =  _injector.get(AlertService);
+      alertService.Danger('Ошибка связи с сервером');
+      return true;
+    }
+    else if (exception is NonCriticalError) {
+      return true;
+    }
 
     return false;
   }
