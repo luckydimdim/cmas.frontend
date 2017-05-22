@@ -2,7 +2,6 @@ import 'dart:core';
 import 'package:alert/alert_service.dart';
 import 'package:angular2/platform/browser.dart';
 import 'package:angular2/core.dart';
-import 'package:angular2/src/core/reflection/reflection.dart';
 import 'package:cmas/app_component.dart';
 import 'package:cmas/app_exception_handler.dart';
 import 'package:angular2/router.dart';
@@ -20,9 +19,6 @@ bool get isDebug =>
     'true';
 
 main() async {
-  if (isDebug) {
-    reflector.trackUsage();
-  }
 
   ComponentRef ref = await bootstrap(AppComponent, [
     ROUTER_PROVIDERS,
@@ -48,6 +44,5 @@ main() async {
   if (isDebug) {
     print('Application in DebugMode');
     enableDebugTools(ref);
-    print('Unused keys: ${reflector.listUnusedKeys()}');
   }
 }
