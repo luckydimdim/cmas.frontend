@@ -1,4 +1,5 @@
 import 'dart:core';
+
 import 'package:alert/alert_service.dart';
 import 'package:angular2/platform/browser.dart';
 import 'package:angular2/core.dart';
@@ -14,12 +15,12 @@ import 'package:http_wrapper/http_wrapper.dart';
 import 'package:auth/auth_service.dart';
 
 import 'package:angular2/platform/common.dart';
+
 bool get isDebug =>
     (const String.fromEnvironment('PRODUCTION', defaultValue: 'false')) !=
     'true';
 
 main() async {
-
   ComponentRef ref = await bootstrap(AppComponent, [
     ROUTER_PROVIDERS,
 
@@ -34,7 +35,10 @@ main() async {
     const Provider(AuthorizationService),
     const Provider(AlertService),
     provide(Client, useFactory: () => new BrowserClient(), deps: []),
-    provide(HttpWrapper, useFactory: (_http, _authenticationService) => new HttpWrapper(_http, _authenticationService), deps: [Client, AuthenticationService])
+    provide(HttpWrapper,
+        useFactory: (_http, _authenticationService) =>
+            new HttpWrapper(_http, _authenticationService),
+        deps: [Client, AuthenticationService])
     // provide(Client, useClass: InMemoryDataService)
     // Using a real back end?
     // Import browser_client.dart and change the above to:
