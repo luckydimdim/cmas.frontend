@@ -13,6 +13,7 @@ import 'package:contractor_list/contractor_list_component.dart';
 import 'package:analytics/analytics_component.dart';
 import 'package:object_budget/object_budget_component.dart';
 import 'package:master_layout/master_layout_component.dart';
+import 'package:administration/administration_component.dart';
 
 @Component(selector: 'master',
     templateUrl: 'master_component.html', directives: const [
@@ -32,7 +33,9 @@ import 'package:master_layout/master_layout_component.dart';
   ObjectListComponent.route,
   ObjectBudgetComponent.route,
   ContractorListComponent.route,
-  AnalyticsComponent.route
+  AnalyticsComponent.route,
+    const Route(
+    path: 'administration/...', component: AdministrationComponent, name: 'Administration', data: AdministrationComponent.DisplayName)
 ])
 class MasterComponent {
   MasterComponent() {}
