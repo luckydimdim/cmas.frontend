@@ -80,6 +80,11 @@ class AppExceptionHandler extends BrowserExceptionHandler {
       alertService.Danger('Ошибка связи с сервером');
       return true;
     }
+    else if (exception is ForbiddenError) {
+      AlertService alertService =  _injector.get(AlertService);
+      alertService.Warning('Ошибка: доступ запрещен');
+      return true;
+    }
     else if (exception is NonCriticalError) {
       return true;
     }
