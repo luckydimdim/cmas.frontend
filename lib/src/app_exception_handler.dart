@@ -9,7 +9,8 @@ import 'package:angular2/router.dart';
 import 'package:auth/auth_service.dart';
 
 @Injectable()
-AppExceptionHandler appExceptionHandler(ConfigService config, Injector injector) {
+AppExceptionHandler appExceptionHandler(
+    ConfigService config, Injector injector) {
   return new AppExceptionHandler(new LoggerService(config), injector);
 }
 
@@ -21,15 +22,11 @@ class AppExceptionHandler extends BrowserExceptionHandler {
   final LoggerService _logger;
   final Injector _injector;
 
-  AppExceptionHandler(
-      [this._logger = null, this._injector = null])
-      : super();
+  AppExceptionHandler([this._logger = null, this._injector = null]) : super();
 
   void call(dynamic exception,
       [dynamic stackTrace = null, String reason = null]) {
-
-    if (handleException(exception))
-      return;
+    if (handleException(exception)) return;
 
     sendToServer(exception, stackTrace, reason);
 
@@ -47,49 +44,44 @@ class AppExceptionHandler extends BrowserExceptionHandler {
   }
 
   bool handleException(dynamic exception) {
-
     if (exception is UnauthorizedError) {
+      if (_injector == null) return false;
 
-      if (_injector == null )
-        return false;
+      Router router = _injector.get(Router);
 
-      Router router =  _injector.get(Router);
-
-      AuthenticationService authenticationService =  _injector.get(AuthenticationService);
+      AuthenticationService authenticationService =
+          _injector.get(AuthenticationService);
 
       authenticationService.logout();
 
-      router.navigate(['Auth', {'url':router.lastNavigationAttempt}] );
+      router.navigate([
+        'Auth',
+        {'url': router.lastNavigationAttempt}
+      ]);
 
       return true;
-    }
-    else if (exception is  GeneralError) {
-      String message = (exception as  GeneralError).details;
+    } else if (exception is GeneralError) {
+      String message = (exception as GeneralError).details;
 
-      AlertService alertService =  _injector.get(AlertService);
+      AlertService alertService = _injector.get(AlertService);
       alertService.Danger('Ошибка: $message');
       return true;
-    }
-    else if (exception is  InternalServerError) {
-      AlertService alertService =  _injector.get(AlertService);
+    } else if (exception is InternalServerError) {
+      AlertService alertService = _injector.get(AlertService);
       alertService.Danger('Непредвиденная ошибка');
       return true;
-    }
-    else if (exception is ConnectionError) {
-      AlertService alertService =  _injector.get(AlertService);
+    } else if (exception is ConnectionError) {
+      AlertService alertService = _injector.get(AlertService);
       alertService.Danger('Ошибка связи с сервером');
       return true;
-    }
-    else if (exception is ForbiddenError) {
-      AlertService alertService =  _injector.get(AlertService);
+    } else if (exception is ForbiddenError) {
+      AlertService alertService = _injector.get(AlertService);
       alertService.Warning('Ошибка: доступ запрещен');
       return true;
-    }
-    else if (exception is NonCriticalError) {
+    } else if (exception is NonCriticalError) {
       return true;
     }
 
     return false;
   }
-
 }

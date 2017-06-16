@@ -14,8 +14,10 @@ import 'package:resources_loader/resources_loader.dart';
 
 const String authPath = 'auth';
 
-@Component(selector: 'cmas-app',
-    templateUrl: 'app_component.html', directives: const [
+@Component(
+    selector: 'cmas-app',
+    templateUrl: 'app_component.html',
+    directives: const [
       MasterComponent,
       AlertComponent,
       AuthComponent,
@@ -23,8 +25,8 @@ const String authPath = 'auth';
       AuthRouterOutlet
     ],
     providers: const [
-  const Provider(ResourcesLoaderService, useClass: ResourcesLoaderService)
-])
+      const Provider(ResourcesLoaderService, useClass: ResourcesLoaderService)
+    ])
 @RouteConfig(const [
   const Route(
       path: '/...',
@@ -32,7 +34,8 @@ const String authPath = 'auth';
       name: 'Master',
       useAsDefault: true),
   const Route(path: authPath, component: AuthComponent, name: 'Auth'),
-  const Route(path: 'activation', component: ActivationComponent, name: 'Activation')
+  const Route(
+      path: 'activation', component: ActivationComponent, name: 'Activation')
 ])
 class AppComponent implements AfterViewInit {
   final AuthenticationService _authService;
