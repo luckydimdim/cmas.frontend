@@ -8,4 +8,6 @@
 5) снять чекбок "track only root files"
 
 Сборка для выкладки:
-pub build --mode=release -DPRODUCTION=true
+pub build --mode=release -DENVIRONMENT=development 
+pub build --mode=release -DENVIRONMENT=production 
+pub build --mode=release -DENVIRONMENT=test 
