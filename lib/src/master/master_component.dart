@@ -4,7 +4,7 @@ import 'package:angular2/router.dart';
 import 'package:alert/alert_component.dart';
 
 import 'package:contracts/contracts_component.dart';
-//import 'package:dashboard/dashboard_component.dart';
+import 'package:dashboard/dashboard_component.dart';
 //import 'package:object_budget_list/object_budget_list_component.dart';
 //import 'package:payment_budget_list/payment_budget_list_component.dart';
 import 'package:requests/requests_component.dart';
@@ -29,9 +29,9 @@ import 'package:administration/administration_component.dart';
       path: 'contracts/...',
       component: ContractsComponent,
       name: 'Contracts',
-      useAsDefault: true,
+      useAsDefault: false,
       data: ContractsComponent.DisplayName),
-  //DashboardComponent.route,
+  DashboardComponent.route,
   //ObjectBudgetListComponent.route,
   //PaymentBudgetListComponent.route,
   const Route(
